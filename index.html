@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dessin animé SVG - Homme avec Houe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Paysage d'arrière-plan -->
+        <div class="landscape"></div>
+        
+        <!-- SVG dessin de l'homme avec une houe dans un champ -->
+        <svg class="drawing" viewBox="0 0 300 300">
+            <!-- Champ -->
+            <rect id="field" x="0" y="200" width="300" height="100" fill="#8B4513" />
+            <!-- Corps de l'homme -->
+            <path id="body" d="M150 150 L150 220" stroke="black" stroke-width="2" fill="none" />
+            <!-- Tête de l'homme -->
+            <circle id="head" cx="150" cy="140" r="10" stroke="black" stroke-width="2" fill="none" />
+            <!-- Bras tenant la houe -->
+            <path id="arm" d="M150 160 L180 190" stroke="black" stroke-width="2" fill="none" />
+            <!-- Houe -->
+            <path id="hoe" d="M180 190 L200 180 L185 170" stroke="black" stroke-width="2" fill="none" />
+            <!-- Jambes -->
+            <path id="legs" d="M150 220 L140 260 M150 220 L160 260" stroke="black" stroke-width="2" fill="none" />
+        </svg>
+        
+        <!-- Image de la main qui dessine -->
+        <img src="hand.png" alt="Main" class="hand" id="hand">
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

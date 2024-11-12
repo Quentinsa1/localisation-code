@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #87CEEB;
+    overflow: hidden;
+}
+.container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+
+/* Paysage d'arrière-plan */
+.landscape {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #3CB371, #87CEEB);
+    border-radius: 10px;
+}
+
+/* SVG dessin */
+.drawing {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.drawing path, .drawing circle, .drawing rect {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 6s ease forwards;
+}
+
+/* Animation de dessin */
+@keyframes draw {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Main */
+.hand {
+    position: absolute;
+    width: 40px;
+    transition: transform 0.1s;
+}
